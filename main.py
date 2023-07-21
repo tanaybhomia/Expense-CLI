@@ -1,21 +1,19 @@
 from expense import Expense
+import datetime
+import calendar
 
 
-def main():
-    print("💸 This is a Expense Tracker!")
-    
-	# Creating the User File 
-    expense_file_path = "expense.csv"
-    
-	# Takes the user input 
-    # expense = user_input()
-    
-	# Saves the input to the file
-    # savetofile(expense,expense_file_path)
-    
-	# Rd the file and then show the summmary
-    summaries(expense_file_path) 
-    pass
+def get_budget_from_user_or_file():
+    budget_file_path = "budget.txt"
+    try:
+        with open(budget_file_path, "r") as budget_file:
+            budget = float(budget_file.readline().strip())
+            return budget
+    except FileNotFoundError:
+        budget = float(input("Enter your monthly budget: "))
+        with open(budget_file_path, "w") as budget_file:
+            budget_file.write(str(budget))
+        return budget
 
 def user_input():
 	print(f"✍️ Enter the expense")
@@ -80,6 +78,60 @@ def summaries(expense_file_path,budget):
 	print("Expenses by Category 📈")
 	for category,amount in amount_by_category.items():
 		print(f"	{category}:,{amount:.2f}₹")
+	
+	total = float(sum(amount_by_category.values()))
+	remaining_budget = budget-total
+	print(f"💰 You have spent a total of {total}")
+	print(f"🎫 Remaining Budget {remaining_budget}")
+	if remaining_budget <= 0:
+		print(f"You have already spent over the budget")
+
+def main():
+    print(r'''
+ 	 ______                                  _______             _             
+ 	|  ____|                                |__   __|           | |            
+ 	| |__  __  ___ __   ___ _ __  ___  ___     | |_ __ __ _  ___| | _____ _ __ 
+ 	|  __| \ \/ / '_ \ / _ \ '_ \/ __|/ _ \    | | '__/ _` |/ __| |/ / _ \ '__|
+ 	| |____ >  <| |_) |  __/ | | \__ \  __/    | | | | (_| | (__|   <  __/ |   
+ 	|______/_/\_\ .__/ \___|_| |_|___/\___|    |_|_|  \__,_|\___|_|\_\___|_|   
+ 	            | |                                                            
+ 	            |_|  
+	''')
+    
+	# Creates the Budget file 
+    budget = get_budget_from_user_or_file()
+    
+	# Creates the Expenses Database
+    expense_file_path = "expense.csv"
+    
+	# Options 
+    while True:
+        print("\n🔢 Options :")
+        print("\t1. 💸 Enter an Expense")
+        print("\t2. 📓 Show Summary")
+        print("\t3. 🔴 Exit")
+        choice = input("-> ")
+
+        if choice == "1":
+            # Takes the user input
+            expense = user_input()
+
+            # Saves the input to the file
+            savetofile(expense, expense_file_path)
+	    
+        elif choice == "2":
+            # Rd the file and then show the summary
+            summaries(expense_file_path, budget)
+	    
+        elif choice == "3":
+            print("Exiting the Expense Tracker. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+            continue
+
+
+
 
 if __name__ == "__main__":
 	main()
