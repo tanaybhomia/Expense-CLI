@@ -28,7 +28,7 @@ def user_input():
 	print(f"\n✍️ ENTER THE EXPENSE")
 	expense_name = input("I Bought :")
 	expense_amount = float(input("For Rupees :"))
-	print(f"Your Expense is {expense_name} and {expense_amount}")
+	print(f"You spent {expense_amount} on {expense_name}")
 
 	# defining categories 
 	expense_category = [
@@ -51,8 +51,18 @@ def user_input():
 		selected_index = int(input(f"Enter a Category {value_range} : ")) - 1
 		if selected_index in range(len(expense_category)):
 			selected_category = expense_category[selected_index]
-			newexpense = Expense(name = expense_name,category= selected_category,amount=expense_amount)
-			return newexpense
+
+			print("\n📝 ENTERED EXPENSE DETAILS")
+			print(f"  Expense Name: {expense_name}")
+			print(f"  Expense Amount: {expense_amount}")
+			print(f"  Expense Category: {selected_category}")
+			confirm = input("\nENTER THIS RESPONSE (yes/no): ")
+
+			if confirm.lower() == "yes":
+				newexpense = Expense(name = expense_name,category= selected_category,amount=expense_amount)
+				return newexpense
+			else :
+				break
 		else : 
 			print("Invalid Entry, Please try again")
 
@@ -98,6 +108,12 @@ def summaries(expense_file_path,budget):
 	else :
 		print(f"🎫 Remaining Budget {remaining_budget}")
 
+def main_menu():
+    print("\n✅ WHAT DO YOU WANT TO DO") 
+    print("1. 💸 Enter an Expense")
+    print("2. 📓 Show Summary")
+    print("3. 🔴 Exit")
+
 def main():
     print(r'''
  ______                                  _______             _
@@ -110,18 +126,14 @@ def main():
             |_|  
     ''')
     
-	# Creates the Budget file 
+    # Creates the Budget file 
     budget = get_budget_from_user_or_file()
     
-	# Creates the Expenses Database
+    # Creates the Expenses Database
     expense_file_path = "expense.csv"
     
-	# Options 
     while True:
-        print("\n✅ WHAT DO YOU WANT TO DO")
-        print("1. 💸 Enter an Expense")
-        print("2. 📓 Show Summary")
-        print("3. 🔴 Exit")
+        main_menu()
         choice = input("-> ")
 
         if choice == "1":
@@ -130,28 +142,16 @@ def main():
 
             # Saves the input to the file
             savetofile(expense, expense_file_path)
-	    
-			# Ask the user if they want to enter another expense
-            another_expense = input("Do you want to enter another expense? (yes/no): ")
-            if another_expense.lower() == "yes":
-                continue
-            else:
-                # If the user does not want to enter another expense, go back to the main menu
-                continue
-	    
+
         elif choice == "2":
             # Rd the file and then show the summary
             summaries(expense_file_path, budget)
-	    
         elif choice == "3":
             print("EXITING THE EXPENSE TRACKER! BYE 🖐️")
             break
         else:
             print("Invalid choice. Please try again.")
             continue
-
-
-
 
 if __name__ == "__main__":
 	main()
