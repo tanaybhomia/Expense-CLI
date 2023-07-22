@@ -131,6 +131,14 @@ def main():
             # Saves the input to the file
             savetofile(expense, expense_file_path)
 	    
+			# Ask the user if they want to enter another expense
+            another_expense = input("Do you want to enter another expense? (yes/no): ")
+            if another_expense.lower() == "yes":
+                continue
+            else:
+                # If the user does not want to enter another expense, go back to the main menu
+                continue
+	    
         elif choice == "2":
             # Rd the file and then show the summary
             summaries(expense_file_path, budget)
