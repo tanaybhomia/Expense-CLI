@@ -1,89 +1,87 @@
 
-<img align = "left" width = "80" height = "80" src = "
-# YoutubeDL
+# ExpCLI
+<br>
 
-```
-   ______                                  _______             _
-|  ____|                                |__   __|           | |
-| |__  __  ___ __   ___ _ __  ___  ___     | |_ __ __ _  ___| | _____ _ __
-|  __| \ \/ / '_ \ / _ \ '_ \/ __|/ _ \    | | '__/ _` |/ __| |/ / _ \ '__|
-| |____ >  <| |_) |  __/ | | \__ \  __/    | | | | (_| | (__|   <  __/ |
-|______/_/\_\ .__/ \___|_| |_|___/\___|    |_|_|  \__,_|\___|_|\_\___|_|
-            | |
-            |_|  
-```
+A simple terminal based expense tracker which lets you track and summarise your expenses 
 
-A simple utility to download youtube videos for personal use.
+![image](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/604c4577-2e55-4e2a-99d8-6f99fc091620)
 
-# Features
 
-- Download YouTube videos easily.
-- Downloads the video in the highest quality available
-- Fast and efficient download process.
+# Features 💥
 
-# Installation
+- Enter Expenses Easily
+- Enter a monthly budget 
+- Summarise the Expenses
+- Looks good actually (uses emojis to add extra readibility)
+
+# Installation 🪟
 
 ## Pre-Requesties 
 - Make sure you have Python 3.6 or higher installed on your system.
-- Install the youtube-dl package using pip:
 
-    ```bash
-    pip install youtube-dl
-    ```
-
-## Cloning
+## Cloning ♻️
 - Clone the Repository using the ``` git clone ``` to the directory that you want.
 - ```cd``` to the cloned folder 
 
-## Installing 
+## Installing ⬇️
 
-### Directly from the File
+### Directly from the File 📁
 ```bash
-python ytdl.py
+python expcli.py
 ```
-- You can directly run the python file which is the portable file for the logic 
-- This will directly run this window
+- This will run this window
   
-   ![image](https://github.com/tanaybhomia/YouTubeDl/assets/71910027/cb5fb8c1-61b7-48d8-be20-82e1cf01f1a1) 
+  ![image](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/c830888d-9a77-4c32-888f-2f773a762bfd)
 
-### Installing the utility system wide using the Installer script (Recommended)
+   
+
+### Installing the utility system wide using the Installer script (Recommended) 💻
 
 ```bash
 python create_executable.py
 ```
 
-- Creates a ```Youtube_Downloads``` folder in your Downloads directory
-- Add the Path Environment variable automatically 
-- Create executable file which you can run system wide
-- This is how the program should look after installing the utility
+- Creates a '''expcli.exe''' file
+- The adds you in your bin file on windows so you can run it from everywhere 
   
-   ![image](https://github.com/tanaybhomia/YouTubeDl/assets/71910027/96fb6565-90a7-4d41-8209-6ce30d03e0ce)
+   ![image](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/55066eec-1aa2-452d-9869-0fb29a397f74)   
 
-## Demo
+## Technolgies and Libraries 🛰️
 
-   ![demo](https://github.com/tanaybhomia/YouTubeDl/assets/71910027/3a77ad85-39b4-43a7-a144-dd0eb2d93475)
-
-## Technolgies and Libraries
-
-- os 
-- requests 
-- locale
-- pytube
-- tqdm
-- re 
-- platform 
-- shutil 
+- shutil
+- platform
 - subprocess
 
-## Acknowledgements
+## Acknowledgements 📎
 
  - [Chatgpt](https://chat.openai.com/) (For the Installation script)
+ - [Expense Tracker)(https://www.youtube.com/watch?v=HTD86h69PtE) (For the Idea)
  - [Readme.so](https://readme.so/)
- - [3 Python Projects](https://youtu.be/vEQ8CXFWLZU)
- - [Pytube](https://pytube.io/en/latest/)
 
+## Documentation 🗒️
 
-## Author(s)
+- Main Structure
 
-- [@tanaybhomia](https://github.com/tanaybhomia)
+  ![image](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/3080f594-a519-4408-8169-5174eda7859e)
 
+- Main Class
+  
+  ![mainclass](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/3f703c46-370e-4c70-936e-2b1eaddca820)
+
+- User Input
+  
+  ![userinput](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/d3aeb557-af96-4e02-ac2a-646edcc7f57a)
+
+- Saves the Userinput in the file
+  
+  ![save](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/5d27ee07-ebe4-49c5-85b2-7a3d8ee0fc12)
+
+- Expenses Files
+  
+  ![savefile](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/4e949b5a-7efe-40cf-a6ae-053aba637ecf)
+
+- Summarise
+  
+  ![summary](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/46dbe6fa-eedc-40cf-893d-bd27c985eb79)
+
+    
