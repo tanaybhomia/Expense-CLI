@@ -98,7 +98,7 @@ def summaries(expense_file_path,budget):
 
 	print("Expenses by Category")
 	for category,amount in amount_by_category.items():
-		print(f"  {category}:,{amount:.2f}₹")
+		print(f"  {category}:{amount:.2f}₹")
 	
 	total = float(sum(amount_by_category.values()))
 	remaining_budget = budget-total
