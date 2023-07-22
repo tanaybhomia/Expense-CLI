@@ -19,13 +19,13 @@ A simple terminal based expense tracker which lets you track and summarise your 
 ## Pre-Requesties 
 - Make sure you have Python 3.6 or higher installed on your system.
 
-## Cloning ♻️
+## Cloning 
 - Clone the Repository using the ``` git clone ``` to the directory that you want.
 - ```cd``` to the cloned folder 
 
-## Installing ⬇️
+## Installing 
 
-### Directly from the File 📁
+### Directly from the File 
 ```bash
 python expcli.py
 ```
@@ -35,7 +35,7 @@ python expcli.py
 
    
 
-### Installing the utility system wide using the Installer script (Recommended) 💻
+### Installing the utility system wide using the Installer script (Recommended) 
 
 ```bash
 python create_executable.py
@@ -46,19 +46,19 @@ python create_executable.py
   
    ![image](https://github.com/tanaybhomia/Expense-CLI/assets/71910027/55066eec-1aa2-452d-9869-0fb29a397f74)   
 
-## Technolgies and Libraries 🛰️
+# Technolgies and Libraries 🛰️
 
 - shutil
 - platform
 - subprocess
 
-## Acknowledgements 📎
+# Acknowledgements 📎
 
  - [Chatgpt](https://chat.openai.com/) (For the Installation script)
  - [Expense Tracker)(https://www.youtube.com/watch?v=HTD86h69PtE) (For the Idea)
  - [Readme.so](https://readme.so/)
 
-## Documentation 🗒️
+# Documentation 🗒️
 
 - Main Structure
 
