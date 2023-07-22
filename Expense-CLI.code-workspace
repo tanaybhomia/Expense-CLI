@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "../Expense-CLI - Copy"
+		},
+		{
+			"path": "."
 		}
 	]
 }

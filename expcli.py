@@ -26,9 +26,9 @@ def get_budget_from_user_or_file():
 # Takes the User input for an Expense 
 def user_input():
 	print(f"\n✍️ ENTER THE EXPENSE")
-	expense_name = input("I Bought :")
-	expense_amount = float(input("For Rupees :"))
-	print(f"You spent {expense_amount} on {expense_name}")
+	expense_name = input("  I Bought :")
+	expense_amount = float(input("  For Rupees :"))
+	print(f"  You spent {expense_amount} on {expense_name}")
 
 	# defining categories 
 	expense_category = [
@@ -110,9 +110,9 @@ def summaries(expense_file_path,budget):
 
 def main_menu():
     print("\n✅ WHAT DO YOU WANT TO DO") 
-    print("1. 💸 Enter an Expense")
-    print("2. 📓 Show Summary")
-    print("3. 🔴 Exit")
+    print("  1. 💸 Enter an Expense")
+    print("  2. 📓 Show Summary")
+    print("  3. 🔴 Exit")
 
 def main():
     print(r'''
