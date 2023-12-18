@@ -1,3 +1,5 @@
+# Expense CLI 
+
 import os
 import platform
 import subprocess
